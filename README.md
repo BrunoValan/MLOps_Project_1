@@ -3,4 +3,4 @@ This is a demo repository for the class AIPI 561 that focuses of applying DevOps
 
 --
 
-##Project Scaffold
+## Project Scaffold
