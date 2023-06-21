@@ -1,6 +1,2 @@
-from app import hello
+from cli import generate_summary
 
-
-# pip freeze shows all versions that are isntalled
-def test_hello():
-    assert "demo hello" == hello()
