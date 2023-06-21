@@ -11,8 +11,17 @@ summary_generator = pipeline(
 )
 
 @click.command()
-@click.argument('text_body', type=str)
+@click.argument('text_body', type=str, required = False)
 def generate_summary(text_body):
+
+    #prompt user for text argument if noner is given 
+    if text_body is None: 
+        text_body = click.prompt('Please enter the text you want to summarize')
+
+    #raise type error if input is not a string
+    if not isinstance(text_body, str):
+        raise TypeError("Input must be a string.")
+    
     result = summary_generator(
         text_body,
         min_length=8,
@@ -26,6 +35,7 @@ def generate_summary(text_body):
     )
     summary_text = result[0]['summary_text']
     click.echo(summary_text)
+    return summary_text
 
 if __name__ == '__main__':
     generate_summary()
