@@ -5,3 +5,5 @@ black
 ipython
 flask
 click
+torch 
+transformers 
