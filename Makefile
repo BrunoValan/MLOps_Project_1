@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=cli tests
+	python -m pytest -vv --cov=cli test_cli.py
 
 format:
 	black *.py
