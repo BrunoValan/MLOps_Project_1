@@ -7,6 +7,7 @@ summary_generator = pipeline(
     "summarization", model=summary_model, device=0 if torch.cuda.is_available() else -1
 )
 
+
 def generate_summary(text_body):
     # raise type error if input is not a string
     if not isinstance(text_body, str):

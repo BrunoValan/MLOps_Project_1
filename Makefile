@@ -8,10 +8,4 @@ test:
 format:
 	black *.py
 
-
-lint:
-	pylint --disable=R,C cli.py
-	
-
-
 all: install lint test
